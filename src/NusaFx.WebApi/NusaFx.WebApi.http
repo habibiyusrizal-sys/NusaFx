@@ -1,0 +1,6 @@
+@NusaFx.WebApi_HostAddress = http://localhost:5277
+
+GET {{NusaFx.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
