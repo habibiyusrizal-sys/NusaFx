@@ -59,31 +59,33 @@ flowchart LR
     CurrencyController -->|Response| Client
 ```
 
-## Project Structure
-src/
-├── NusaFx.WebApi/                # Presentation Layer (ASP.NET Core Web API)
-│   ├── Controllers/              # API endpoints (CurrencyController, etc.)
-│   ├── Properties/               # Assembly info
-│   ├── Program.cs                # Startup and service registration
-│   ├── appsettings.json          # Configuration (API keys, Redis, etc.)
-│   ├── appsettings.Development.json
-│
-├── NusaFx.Application/           # Application Layer (business logic, orchestration)
-│   ├── Common/                   # Shared utilities
-│   │   └── Models/               # DTOs, Result<T>, PagedResult, Currency, etc.
-│   ├── Entities/                 # Application-specific entities
-│   ├── Interfaces/               # Abstractions (ICurrencyService, ICacheService, etc.)
-│   ├── Middleware/               # Cross-cutting concerns (logging, exception handling)
-│   └── Services/                 # Core services (CurrencyService, AiRateService, TransactionService)
-│
-├── NusaFx.Infrastructure/        # Infrastructure Layer (external concerns)
-│   ├── Persistence/              # EF Core DbContext, Configurations, Scripts
-│   ├── Repositories/             # Repository implementations
 
-│
-├── NusaFx.sln                    # Solution file
-├── README.md                     # Documentation
-├── .gitignore
-└── global.json
+---
 
+### 📸 Snapshot
+
+## 📸 Snapshots
+
+To make the project easier to understand, here are some screenshots of the running application and API:
+
+### 🔹 Swagger UI Endpoints
+![Swagger UI Endpoints](src/snapshoot/Screenshot%202026-08-08%20at%2009-54-27%20Swagger%20UI.png)
+
+### 🔹 Conversion with AI Rate
+![Conversion AI Rate](src/snapshoot/ConvertWithAi.png)
+
+### 🔹 Solution Explorer (Project Structure)
+![Conversion](src/snapshoot/Conversion.png)
+
+
+---
+
+### 🔑 Notes
+- **WebApi** → Presentation layer (controllers, startup, configs).
+- **Application** → Business logic, services, DTOs, middleware.
+- **Infrastructure** → Persistence, repositories.
+
+This format is clean, consistent, and matches GitHub/Markdown best practices.
+
+---
 
